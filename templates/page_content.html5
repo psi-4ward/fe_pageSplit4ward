@@ -1,0 +1,50 @@
+<?php // default Contao 2.10.1 fe_page.html5 content ?>
+<div id="wrapper">
+<?php if ($this->header): ?>
+
+<header id="header">
+<div class="inside">
+<?php echo $this->header; ?> 
+</div>
+</header>
+<?php endif; ?>
+<?php echo $this->getCustomSections('before'); ?>
+
+<div id="container">
+<?php if ($this->left): ?>
+
+<aside id="left">
+<div class="inside">
+<?php echo $this->left; ?> 
+</div>
+</aside>
+<?php endif; ?>
+<?php if ($this->right): ?>
+
+<aside id="right">
+<div class="inside">
+<?php echo $this->right; ?> 
+</div>
+</aside>
+<?php endif; ?>
+
+<section id="main">
+<div class="inside">
+<?php echo $this->main; ?> 
+</div>
+<?php echo $this->getCustomSections('main'); ?> 
+<div id="clear"></div>
+</section>
+
+</div>
+<?php echo $this->getCustomSections('after'); ?>
+<?php if ($this->footer): ?>
+
+<footer id="footer">
+<div class="inside">
+<?php echo $this->footer; ?> 
+</div>
+</footer>
+<?php endif; ?>
+
+</div>
