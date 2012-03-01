@@ -1,4 +1,4 @@
-<?php // default Contao 2.10.1 fe_page.html5 content ?>
+<?php // default Contao 2.11 fe_page.html5 content ?>
 <div id="wrapper">
 <?php if ($this->header): ?>
 
@@ -28,13 +28,13 @@
 </aside>
 <?php endif; ?>
 
-<section id="main">
+<div id="main">
 <div class="inside">
 <?php echo $this->main; ?> 
 </div>
 <?php echo $this->getCustomSections('main'); ?> 
 <div id="clear"></div>
-</section>
+</div>
 
 </div>
 <?php echo $this->getCustomSections('after'); ?>

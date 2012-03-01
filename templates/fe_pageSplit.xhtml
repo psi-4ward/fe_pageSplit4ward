@@ -6,7 +6,6 @@
 	echo $objContent->parse();
 ?>
 <body id="top" class="{{ua::class}}<?php if ($this->class): ?> <?php echo $this->class; ?><?php endif; ?>"<?php if ($this->onload): ?> onload="<?php echo $this->onload; ?>"<?php endif; ?>>
-<?php $this->showIE6warning(); ?>
 
 <?php
 	$objContent = new FrontendTemplate($this->layout->fe_pageSplitContentTpl);

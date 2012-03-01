@@ -1,4 +1,4 @@
-<?php // default Contao 2.10.1 fe_page.html5 header ?>
+<?php // default Contao 2.11 fe_page.html5 header ?>
 <head>
 <meta charset="<?php echo $this->charset; ?>">
 <title><?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?></title>

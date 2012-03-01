@@ -1,4 +1,4 @@
-<?php // default Contao 2.10.1 fe_page.html5 footer ?>
+<?php // default Contao 2.11 fe_page.html5 footer ?>
 <?php echo $this->mootools; ?>
 <?php if (!$this->disableCron): ?>
 
@@ -7,7 +7,7 @@ new Request({
   url:'system/html/cron.txt',
   onComplete: function(txt) {
     if (!txt) txt = 0;
-    if (parseInt(txt) < (Date.now()/1000 - 300)) {
+    if (parseInt(txt) < (Math.round(+new Date()/1000) - 300)) {
       new Request({url:'cron.php'}).get();
     }
   }
