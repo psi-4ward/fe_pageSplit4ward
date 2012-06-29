@@ -61,7 +61,7 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['fe_pageSplitFootTpl'] = array (
 	'sorting'                 => true,
 	'flag'                    => 11,
 	'inputType'               => 'select',
-	'default'				  => 'page_hfoot',
+	'default'				  => 'page_foot',
 	'options_callback'        => array('fe_pageSplit4ward', 'getTemplates'),
 	'eval'                    => array('tl_class'=>'w50')
 );
