@@ -1,16 +1,11 @@
-<?php // default Contao 2.11 fe_page.html5 footer ?>
-<?php echo $this->mootools; ?>
-<?php if (!$this->disableCron): ?>
+  <?php echo $this->mootools; ?>
 
-<script>
-new Request({
-  url:'system/html/cron.txt',
-  onComplete: function(txt) {
-    if (!txt) txt = 0;
-    if (parseInt(txt) < (Math.round(+new Date()/1000) - 300)) {
-      new Request({url:'cron.php'}).get();
-    }
-  }
-}).get();
-</script>
-<?php endif; ?>
+  <?php if (!$this->disableCron): ?>
+    <script>
+      <?php if ($this->layout->addJQuery): ?>
+        setTimeout(function(){jQuery.ajax("system/cron/cron.txt",{complete:function(e){var t=e.responseText||0;parseInt(t)<Math.round(+(new Date)/1e3)-<?php echo $this->cronTimeout; ?>&&jQuery.ajax("system/cron/cron.php")}})},5e3)
+      <?php else: ?>
+        setTimeout(function(){(new Request({url:"system/cron/cron.txt",onComplete:function(e){e||(e=0),parseInt(e)<Math.round(+(new Date)/1e3)-<?php echo $this->cronTimeout; ?>&&(new Request({url:"system/cron/cron.php"})).get()}})).get()},5e3)
+      <?php endif; ?>
+    </script>
+  <?php endif; ?>

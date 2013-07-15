@@ -1,14 +1,22 @@
-<?php // default Contao 2.11 fe_page.html5 header ?>
+<?php // default Contao 3.1 fe_page.html5 header ?>
+<!DOCTYPE html>
+<html lang="<?php echo $this->language; ?>">
 <head>
-<meta charset="<?php echo $this->charset; ?>">
-<title><?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?></title>
-<base href="<?php echo $this->base; ?>">
-<meta name="robots" content="<?php echo $this->robots; ?>">
-<meta name="description" content="<?php echo $this->description; ?>">
-<meta name="keywords" content="<?php echo $this->keywords; ?>">
-<?php echo $this->framework; ?>
-<?php echo $this->stylesheets; ?>
-<?php echo $this->mooScripts; ?>
-<?php echo $this->head; ?>
-<!--[if lt IE 9]><script src="<?php echo TL_PLUGINS_URL; ?>plugins/html5shim/html5-<?php echo HTML5SHIM; ?>.js"></script><![endif]-->
+
+  <meta charset="<?php echo $this->charset; ?>">
+  <title><?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?></title>
+  <base href="<?php echo $this->base; ?>">
+
+  <meta name="robots" content="<?php echo $this->robots; ?>">
+  <meta name="description" content="<?php echo $this->description; ?>">
+  <meta name="keywords" content="<?php echo $this->keywords; ?>">
+  <meta name="generator" content="Contao Open Source CMS">
+
+  <?php echo $this->viewport; ?>
+  <?php echo $this->framework; ?>
+  <?php echo $this->stylesheets; ?>
+  <?php echo $this->mooScripts; ?>
+  <?php echo $this->head; ?>
+  <!--[if lt IE 9]><script src="<?php echo TL_ASSETS_URL; ?>assets/html5shiv/<?php echo HTML5SHIV; ?>/html5shiv.js"></script><![endif]-->
+
 </head>
