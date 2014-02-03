@@ -1,0 +1,92 @@
+<div class="outer-wrapper">
+	<?php if ($this->header): ?>
+	<header>
+		<div class="ym-wrapper">
+			<div class="ym-wbox">
+			  <?php echo $this->header; ?>
+			</div>
+		</div>
+	</header>
+	<?php endif; ?>
+
+	<?php if ($this->getCustomSections('before')): ?>
+	<div class="customsectionsbefore">
+		<div class="ym-wrapper">
+			<div class="ym-wbox">
+				<div class="ym-cbox">
+				<?php echo $this->getCustomSections('before'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
+	
+	
+	<div class="main">
+		<div class="ym-wrapper">
+			<div class="ym-wbox">
+				<?php /* one columne */ if(!$this->left && !$this->right): ?>
+					<?php echo $this->main; ?>
+					
+				<?php /* three column */ elseif($this->left && $this->right): ?>
+				<div class="ym-column linearize-level-1">
+					<div class="ym-col1">
+						<div class="ym-cbox">
+							<?php echo $this->left; ?>
+						</div>
+					</div>
+					<div class="ym-col2">
+						<div class="ym-cbox">
+							<?php echo $this->right; ?>
+						</div>
+					</div>
+					<div class="ym-col3">
+						<div class="ym-cbox">
+							<?php echo $this->main; ?>
+						</div>
+					</div>
+				</div>
+				
+				<?php /* two column */ elseif($this->left || $this->right): ?>
+				<div class="ym-column linearize-level-1">
+					<div class="ym-col1">
+						<div class="ym-cbox">
+							<?php echo $this->left.$this->right; ?>
+						</div>
+					</div>
+					<div class="ym-col3">
+						<div class="ym-cbox">
+							<?php echo $this->main; ?>
+						</div>
+					</div>
+				</div>
+				
+				<?php endif; ?>
+				
+			</div>
+		</div>
+	</div>
+
+	<?php if ($this->getCustomSections('after')): ?>
+	<div class="customsectionsafter">
+		<div class="ym-wrapper">
+			<div class="ym-wbox">
+				<div class="ym-cbox">
+				<?php echo $this->getCustomSections('after'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
+	<?php if ($this->footer): ?>
+    <footer>
+		<div class="ym-wrapper">
+			<div class="ym-wbox">
+			<?php echo $this->footer; ?>
+			</div>
+		</div>
+	</footer>
+    <?php endif; ?>
+</div>

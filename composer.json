@@ -1,0 +1,43 @@
+{
+  "name": "psi/fe_pagesplit4ward",
+  "description": "Split fe_page.html5 into head/content/foot templates",
+  "keywords": ["contao", "template", "yaml"],
+  "type": "contao-module",
+  "homepage": "https://github.com/psi-4ward/fe_pageSplit4ward",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Christoph Wiechert",
+      "email": "wio@psitrax.de",
+      "homepage": "http://4wardmedia.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "wio@psitrax.de",
+    "issues": "https://github.com/psi-4ward/fe_pageSplit4ward/issues",
+    "forum": "https://community.contao.org/de/forumdisplay.php?110-4ward",
+    "irc": "irc://irc.freenode.org/contao.dev",
+    "source": "https://github.com/psi-4ward/fe_pageSplit4ward"
+  },
+  "require": {
+    "php": ">=5.3",
+    "contao/core": ">=3.1,<3.3"
+  },
+  "replace": {
+    "contao-legacy/fe_pageSplit4ward": "self.version"
+  },
+  "conflict": {
+    "contao/core": "3.0.*"
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/fe_pageSplit4ward"
+      }
+    },
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
+  }
+}

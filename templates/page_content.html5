@@ -1,4 +1,4 @@
-<?php // default Contao 3.1 fe_page.html5 content ?>
+<?php // default Contao 3.2 fe_page.html5 content ?>
   <div id="wrapper">
 
     <?php if ($this->header): ?>
